@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
-
+import {SpotifyService} from './services/spotify.service';
+import {TokenService} from './services/token.service';
 @Component({
+  moduleId: module.id,
   selector: 'my-app',
-  template: `<h1>Hello {{name}}</h1>`,
+  templateUrl: `app.component.html`,
+  providers: [SpotifyService, TokenService]
 })
 export class AppComponent  { name = 'Angular'; }
